@@ -1,0 +1,33 @@
+schema {
+    query: Query
+}
+
+type Query {
+    product(sku: String): Product
+}
+
+type Product {
+    sku: String
+    type: String
+    title: String
+    description: String
+    shipping: [Shipping],
+    details: Details
+}
+
+type Shipping {
+    weight: Int
+    dimensions: Dimension
+}
+
+type Dimension {
+    width: Int
+    height: Int
+    depth: Int
+}
+
+type Details {
+   title: String
+   type: String
+   tracks: [String]
+}

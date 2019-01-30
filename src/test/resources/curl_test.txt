@@ -1,0 +1,11 @@
+* query using GET method
+curl -i 'http://localhost:9080/graphql?query=%7Bproduct%28sku%3A%22sku1%22%29%7Bsku%7D%7D'
+
+curl -i 'http://localhost:9080/graphql?query=%7Bproduct%28sku%3A%20%22sku8585%22%29%20%7Bsku%2C%20shipping%20%7Bweight%7D%2C%20details%20%7Btype%7D%7D%7D'
+
+
+* query using POST method
+curl -XPOST 'http://localhost:9080/graphql' \
+     -H "Content-Type: application/json" \
+     --data '{ "query": "{product(sku: \"sku8585\") {sku, shipping {weight}, details {type}}}"}'
+

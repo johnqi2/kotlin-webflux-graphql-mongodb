@@ -36,4 +36,4 @@ curl -i -XPOST 'http://localhost:9080/graphql' \
 
 ```
 #### NOTE
-How to customerize the GraphQL service endpoints, please refer to [GraphQL Java Spring](https://github.com/graphql-java/graphql-java-springgraphql-java-spring-boot-starter-webflux)
+How to customerize the GraphQL service endpoints, please refer to [GraphQL Java Spring](https://github.com/graphql-java/graphql-java-spring)

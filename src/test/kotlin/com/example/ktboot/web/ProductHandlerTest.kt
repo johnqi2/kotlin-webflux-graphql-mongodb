@@ -1,6 +1,5 @@
 package com.example.ktboot.web
 
-import com.example.ktboot.TestData
 import com.example.ktboot.repo.ProductRepo
 import com.example.ktboot.test.TestDataGenerator
 import org.junit.jupiter.api.BeforeEach
@@ -14,7 +13,7 @@ import org.springframework.test.web.reactive.server.WebTestClient
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ActiveProfiles("test")
-class ProductHandlerIT {
+class ProductHandlerTest {
     @Autowired
     lateinit var webClient: WebTestClient
 

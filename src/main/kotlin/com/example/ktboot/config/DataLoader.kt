@@ -6,6 +6,9 @@ import org.springframework.boot.CommandLineRunner
 import org.springframework.context.annotation.Profile
 import org.springframework.stereotype.Component
 
+/**
+ * A loader to populate MongoDB testing data while app startup.
+ */
 @Component
 @Profile("dev")
 class DataLoader(private val productRepo: ProductRepo) : CommandLineRunner {

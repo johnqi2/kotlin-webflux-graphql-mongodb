@@ -26,8 +26,8 @@ apply plugin: 'io.spring.dependency-management'
 apply plugin: 'com.adarshr.test-logger'
 
 group = 'com.example.ktboot'
-version = '0.5.1'
-sourceCompatibility = '1.8'
+version = '0.5.2'
+sourceCompatibility = '11'
 
 repositories {
   mavenCentral()

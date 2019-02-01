@@ -10,6 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.http.MediaType
 import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.web.reactive.server.WebTestClient
+import java.time.Duration
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ActiveProfiles("test")
@@ -23,7 +24,8 @@ class ProductHandlerTest {
     @BeforeEach
     fun setUp() {
         productRepo.deleteAll()
-        productRepo.save(TestDataGenerator.complexProduct()).subscribe()
+        productRepo.save(TestDataGenerator.complexProduct())
+            .block(Duration.ofSeconds(10))
     }
 
     @Test
